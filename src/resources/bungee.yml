@@ -1,0 +1,4 @@
+name: ChestCommands-Bungee
+main: me.hsgamer.chestcommands_bungee.bungee.Main
+version: "1.0"
+author: HSGamer

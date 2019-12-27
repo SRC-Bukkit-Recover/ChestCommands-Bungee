@@ -37,6 +37,12 @@
         <version>3.1.0</version>
       </plugin>
     </plugins>
+    <resources>
+      <resource>
+        <directory>src/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
   </build>
 
   <properties>
@@ -49,6 +55,10 @@
     <repository>
       <id>spigot-repo</id>
       <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
+    </repository>
+    <repository>
+      <id>bungeecord-repo</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </repository>
   </repositories>
 
@@ -64,6 +74,13 @@
       <groupId>org.spigotmc</groupId>
       <scope>provided</scope>
       <version>${spigot-api.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>net.md-5</groupId>
+      <artifactId>bungeecord-api</artifactId>
+      <version>1.14-SNAPSHOT</version>
+      <type>jar</type>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 
