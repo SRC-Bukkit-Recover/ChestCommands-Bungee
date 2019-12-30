@@ -11,7 +11,7 @@ public class Main extends Addon {
   private static BungeeUtils utils;
 
   public Main() {
-    super("ChestCommands-Addon");
+    super("ChestCommands-Bungee");
   }
 
   public static BungeeUtils getUtils() {
