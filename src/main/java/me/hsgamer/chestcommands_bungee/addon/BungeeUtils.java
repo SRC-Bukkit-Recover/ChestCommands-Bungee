@@ -64,7 +64,7 @@ public class BungeeUtils {
       out.writeUTF("Command");
       out.writeUTF(command);
 
-      sendToBungee(player, "ChestCommand", byteArray);
+      sendToBungee(player, "ChestCommands", byteArray);
     } catch (IOException ex) {
       player.sendMessage(ChatColor.RED
           + "An unexpected exception has occurred. Please notify the server's staff about this. (They should look at the console).");
