@@ -24,9 +24,6 @@ public class Main extends Addon {
     if (!Bukkit.getMessenger().isOutgoingChannelRegistered(getPlugin(), "BungeeCord")) {
       Bukkit.getMessenger().registerOutgoingPluginChannel(getPlugin(), "BungeeCord");
     }
-    if (!Bukkit.getMessenger().isOutgoingChannelRegistered(getPlugin(), "ChestCommands")) {
-      Bukkit.getMessenger().registerOutgoingPluginChannel(getPlugin(), "ChestCommands");
-    }
 
     CommandSerializer.register("server:?", SendIconCommand.class);
     CommandSerializer.register("alert:", AlertIconCommand.class);
@@ -38,9 +35,6 @@ public class Main extends Addon {
     utils = null;
     if (Bukkit.getMessenger().isOutgoingChannelRegistered(getPlugin(), "BungeeCord")) {
       Bukkit.getMessenger().unregisterOutgoingPluginChannel(getPlugin(), "BungeeCord");
-    }
-    if (Bukkit.getMessenger().isOutgoingChannelRegistered(getPlugin(), "ChestCommands")) {
-      Bukkit.getMessenger().unregisterOutgoingPluginChannel(getPlugin(), "ChestCommands");
     }
   }
 }

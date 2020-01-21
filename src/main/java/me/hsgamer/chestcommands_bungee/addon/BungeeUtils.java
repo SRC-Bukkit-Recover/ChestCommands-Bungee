@@ -29,7 +29,7 @@ public class BungeeUtils {
       out.writeUTF("Connect");
       out.writeUTF(server); // Target Server
 
-      sendToBungee(player, "BungeeCord", byteArray);
+      sendToBungee(player, byteArray);
     } catch (IOException ex) {
       player.sendMessage(ChatColor.RED
           + "An unexpected exception has occurred. Please notify the server's staff about this. (They should look at the console).");
@@ -47,7 +47,7 @@ public class BungeeUtils {
       out.writeUTF("ALL");
       out.writeUTF(FormatUtils.addColors(message));
 
-      sendToBungee(player, "BungeeCord", byteArray);
+      sendToBungee(player, byteArray);
     } catch (IOException ex) {
       player.sendMessage(ChatColor.RED
           + "An unexpected exception has occurred. Please notify the server's staff about this. (They should look at the console).");
@@ -64,7 +64,7 @@ public class BungeeUtils {
       out.writeUTF("Command");
       out.writeUTF(command);
 
-      sendToBungee(player, "ChestCommands", byteArray);
+      sendToBungee(player, byteArray);
     } catch (IOException ex) {
       player.sendMessage(ChatColor.RED
           + "An unexpected exception has occurred. Please notify the server's staff about this. (They should look at the console).");
@@ -73,7 +73,7 @@ public class BungeeUtils {
     }
   }
 
-  private void sendToBungee(Player player, String channel, ByteArrayOutputStream byteArray) {
-    player.sendPluginMessage(plugin, channel, byteArray.toByteArray());
+  private void sendToBungee(Player player, ByteArrayOutputStream byteArray) {
+    player.sendPluginMessage(plugin, "BungeeCord", byteArray.toByteArray());
   }
 }

@@ -13,12 +13,11 @@ public class Main extends Plugin implements Listener {
   @Override
   public void onEnable() {
     this.getProxy().getPluginManager().registerListener(this, this);
-    this.getProxy().registerChannel("ChestCommands");
   }
 
   @EventHandler
   public void onPluginMessage(PluginMessageEvent e) {
-    if (e.getTag().equalsIgnoreCase("ChestCommands")) {
+    if (e.getTag().equalsIgnoreCase("BungeeCord")) {
       DataInputStream in = new DataInputStream(new ByteArrayInputStream(e.getData()));
       try {
         String subChannel = in.readUTF();
